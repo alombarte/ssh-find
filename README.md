@@ -18,5 +18,4 @@ Append them in `authorized_keys` of a remote server.
 
 ## Installation
 
-    go build .
-    mv ssh-find /usr/local/bin
+Download from the [releases page](https://github.com/alombarte/ssh-find/releases), decompress, and move to `/usr/local/bin` or similar directory.
