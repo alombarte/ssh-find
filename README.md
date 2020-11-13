@@ -2,6 +2,8 @@
 
 Finds SSH public keys by username. Provide a username and the application will return the content of SSH keys (e.g: `id_rsa.pub`) used in online services.
 
+![Demo](demo/ssh-find-demo.gif)
+
 ## Use case example
 
 Copy your public keys from GitHub (Mac):
