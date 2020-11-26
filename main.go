@@ -58,7 +58,7 @@ func GetSSHKeys(username string) string {
 		url = fmt.Sprintf(url, username)
 		keys := getURLContent(url)
 		if len(keys) > 0 {
-			foundKeys += fmt.Sprintf("# %s (%s):\n%s", username, provider, keys)
+			foundKeys += fmt.Sprintf("\n# %s (%s):\n%s", username, provider, keys)
 		}
 	}
 
