@@ -10,17 +10,35 @@ import (
 )
 
 var appName = "ssh-find"
+var (
+	version = "dev"
+	commit  = "none"
+	date    = "unknown"
+	builtBy = "unknown"
+)
 
 func main() {
+
+	flag.Usage = func() {
+		fmt.Printf(`
+%s v%s (%s)
+
+Usage: %s <username>
+Finds ssh public keys by username
+`, appName, version, date, appName)
+		flag.PrintDefaults()
+	}
 
 	flag.Parse()
 	username := flag.Arg(0)
 
 	if len(username) < 1 {
-		fmt.Printf(`Usage: %s <username>
-Finds ssh public keys by username
+		fmt.Printf(`
+%s v%s (%s)
 
-`, appName)
+Usage: %s <username>
+Finds ssh public keys by username
+`, appName, version, date, appName)
 		os.Exit(1)
 	}
 
